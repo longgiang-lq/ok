@@ -1,5 +1,6 @@
 package com.example.employeemanagementwebapp.service;
 
+import com.example.employeemanagementwebapp.dto.*;
 import com.example.employeemanagementwebapp.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -30,29 +31,15 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     }
 
-    @Override
-    public Employee getEmployeeById(long id) {
-        Optional<Employee> optional=employeeRepository.findById(id);
-        Employee employee =  null;
-        if(optional.isPresent()){
-            employee=optional.get();
-        }else{
-            throw new RuntimeException(" Employee not found for id ::"+id);
-        }
-        return employee;
-    }
 
-    @Override
-    public Employee getEmployeeBYMaCoPhieu(String MaCoPhieu) {
-        Optional<Employee> optional=employeeRepository.findBy(MaCoPhieu);
-        return null;
-    }
 
-    @Override
-    public void deleteEmployeeById(long id) {
-        this.employeeRepository.deleteById(id);
+//    @Override
+//    public Employee getEmployeeBYMaCoPhieu(String MaCoPhieu) {
+//        Optional<Employee> optional=employeeRepository.findBy(MaCoPhieu);
+//        return null;
+//    }
 
-    }
+
 
     @Override
     public Page<Employee> findPaginated(int pageNo, int pageSize, String sortField, String sortDirection) {
@@ -60,5 +47,37 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         Pageable pageable= PageRequest.of(pageNo -1,pageSize,sort);
         return this.employeeRepository.findAll(pageable);
+    }
+
+    @Override
+    public DanhSachDaXem DanhSachDaXem(String macophieu) {
+        return employeeRepository.DanhSachDaXem(macophieu);
+    }
+
+
+
+
+
+
+
+
+    @Override
+    public List<DoanhThu> Doanhthu(String macophieu) {
+        return employeeRepository.Doanhthu(macophieu);
+    }
+
+    @Override
+    public List<LoiNhuan> LoiNhuan(String macophieu) {
+        return employeeRepository.LoiNhuan(macophieu);
+    }
+
+    @Override
+    public List<VonHoa> VonHoa(String macophieu) {
+        return employeeRepository.VonHoa(macophieu);
+    }
+
+    @Override
+    public List<TongHop> Tonghop(String macophieu) {
+        return employeeRepository.Tonghop(macophieu);
     }
 }

@@ -56,23 +56,23 @@
         <thead>
         <tr>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=id&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} + ${reverseSortDir}}">
                     Quý 1</a>
             </th>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} +  ${reverseSortDir}}">
                     Quý 2</a>
             </th>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} +  ${reverseSortDir}}">
                     Quý 3</a>
             </th>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} +  ${reverseSortDir}}">
                     Quý 4</a>
             </th>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} + ${reverseSortDir}}">
                     Kế hoạch % hoàn thành</a>
             </th>
 
@@ -81,12 +81,12 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="employee : ${listEmployees}">
-            <td th:text="${employee.id}"></td>
-            <td th:text="${employee.firstName}"></td>
-            <td th:text="${employee.firstName}"></td>
-            <td th:text="${employee.firstName}"></td>
-            <td th:text="${employee.firstName}"></td>
+        <tr th:each="doanhthu : ${doanhthu}">
+            <td th:text="${doanhthu.DTQ1}"></td>
+            <td th:text="${doanhthu.DTQ2}"></td>
+            <td th:text="${doanhthu.DTQ3}"></td>
+            <td th:text="${doanhthu.DTQ4}"></td>
+            <td th:text="${doanhthu.DTKehoach}"></td>
 
         </tr>
         </tbody>
@@ -99,23 +99,23 @@
         <thead>
         <tr>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=id&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} +  ${reverseSortDir}}">
                     Quý 1</a>
             </th>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} +  ${reverseSortDir}}">
                     Quý 2</a>
             </th>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} + ${reverseSortDir}}">
                     Quý 3</a>
             </th>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} +  ${reverseSortDir}}">
                     Quý 4</a>
             </th>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} + ${reverseSortDir}}">
                     Kế hoạch % hoàn thành</a>
             </th>
 
@@ -124,12 +124,12 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="employee : ${listEmployees}">
-            <td th:text="${employee.id}"></td>
-            <td th:text="${employee.firstName}"></td>
-            <td th:text="${employee.firstName}"></td>
-            <td th:text="${employee.firstName}"></td>
-            <td th:text="${employee.firstName}"></td>
+        <tr th:each="loinhuan : ${loinhuan}">
+            <td th:text="${loinhuan.LNQ1}"></td>
+            <td th:text="${loinhuan.LNQ2}"></td>
+            <td th:text="${loinhuan.LNQ3}"></td>
+            <td th:text="${loinhuan.LNQ4}"></td>
+            <td th:text="${loinhuan.LNKehoach}"></td>
 
         </tr>
         </tbody>
@@ -142,39 +142,39 @@
         <thead>
         <tr>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=id&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} +  ${reverseSortDir}}">
                     EPS</a>
             </th>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} +  ${reverseSortDir}}">
                     P/E</a>
             </th>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} + ${reverseSortDir}}">
                     ROE</a>
             </th>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} + ${reverseSortDir}}">
                     Nợ/VCSH</a>
             </th>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} + ${reverseSortDir}}">
                     SLCP</a>
             </th>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} + ${reverseSortDir}}">
                     Book value</a>
             </th>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} +  ${reverseSortDir}}">
                     p/B</a>
             </th>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} +  ${reverseSortDir}}">
                     ROA</a>
             </th>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} +  ${reverseSortDir}}">
                     Biên lợi nhuận</a>
             </th>
 
@@ -183,15 +183,16 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="employee : ${listEmployees}">
-            <td th:text="${employee.id}"></td>
-            <td th:text="${employee.firstName}"></td>
-            <td th:text="${employee.firstName}"></td>
-            <td th:text="${employee.firstName}"></td>
-            <td th:text="${employee.firstName}"></td>
-            <td th:text="${employee.firstName}"></td>
-            <td th:text="${employee.firstName}"></td>
-            <td th:text="${employee.firstName}"></td>
+        <tr th:each="vonHoa : ${vonHoa}">
+            <td th:text="${vonHoa.EPS}"></td>
+            <td th:text="${vonHoa.PE}"></td>
+            <td th:text="${vonHoa.ROE}"></td>
+            <td th:text="${vonHoa.VCSH}"></td>
+            <td th:text="${vonHoa.SLCP}"></td>
+            <td th:text="${vonHoa.bookvalue}"></td>
+            <td th:text="${vonHoa.PB}"></td>
+            <td th:text="${vonHoa.ROA}"></td>
+            <td th:text="${vonHoa.bienLoiNhuan}"></td>
 
         </tr>
         </tbody>
@@ -203,24 +204,24 @@
         <thead>
         <tr>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=id&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} + ${reverseSortDir}}">
                     Cổ Tức</a>
             </th>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} +  ${reverseSortDir}}">
                     Tiền Mặt</a>
             </th>
             <th>
-                <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
+                <a th:href="@{'/page/' + ${currentPage} + ${reverseSortDir}}">
                     Cổ phiếu</a>
             </th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="employee : ${listEmployees}">
-            <td th:text="${employee.id}"></td>
-            <td th:text="${employee.firstName}"></td>
-            <td th:text="${employee.firstName}"></td>
+        <tr th:each="tongHop : ${tongHop}">
+            <td th:text="${tongHop.coTuc}"></td>
+            <td th:text="${tongHop.tienMat}"></td>
+            <td th:text="${tongHop.coPhieu}"></td>
 
         </tr>
         </tbody>
@@ -233,6 +234,7 @@
 
     <script>
         function myFunction() {
+
             document.getElementById("demo").innerHTML = "45656565";
             document.getElementById("demo").style.color = "red";
         }

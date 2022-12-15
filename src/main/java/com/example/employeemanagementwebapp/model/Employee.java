@@ -1,115 +1,77 @@
 package com.example.employeemanagementwebapp.model;
-
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-
+@IdClass(EmployeeKey.class)
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @Table(name = "employees")
-public class Employee {
+public class Employee implements Serializable {
 
     @Id
-    @GeneratedValue(strategy =  GenerationType.IDENTITY)
-    private long id;
-
-    @Column(name = "MaCoPhieu" )
+    @Column(name = "ma_co_phieu" )
 
     private String MaCoPhieu;
-    @Column(name = "DTQ1")
+    @Column(name = "dtq1")
     private Float DTQ1;
 
-    @Column(name = "DTQ2")
+    @Column(name = "dtq2")
     private Float DTQ2;
 
-    @Column(name = "DTQ3")
+    @Column(name = "dtq3")
     private Float DTQ3;
 
-    @Column(name = "DTQ4")
+    @Column(name = "dtq4")
     private Float DTQ4;
 
-    @Column(name = "DTKehoach")
+    @Column(name = "dtkehoach")
     private Float DTKehoach;
 
 
-    @Column(name = "LNQ1")
+    @Column(name = "lnq1")
     private Float LNQ1;
 
-    @Column(name = "LNQ2")
+    @Column(name = "lnq2")
     private Float LNQ2;
 
-    @Column(name = "LNQ3")
+    @Column(name = "lnq3")
     private Float LNQ3;
 
-    @Column(name = "LNQ4")
+    @Column(name = "lnq4")
     private Float LNQ4;
 
-    @Column(name = "LNKehoach")
+    @Column(name = "lnkehoach")
     private Float LNKehoach;
 
-    @Column(name = "EPS")
+    @Column(name = "eps")
     private Float EPS;
-    @Column(name = "PE")
+    @Column(name = "pe")
     private Float PE;
-    @Column(name = "ROE")
+    @Column(name = "roe")
     private Float ROE;
-    @Column(name = "VCSH")
+    @Column(name = "vcsh")
     private Float VCSH;
-    @Column(name = "SLCP")
+    @Column(name = "slcp")
     private Float SLCP;
-    @Column(name = "Bookvalue")
+    @Column(name = "bookvalue")
     private Float Bookvalue;
-    @Column(name = "PB")
+    @Column(name = "pb")
     private Float PB;
-    @Column(name = "ROA")
+    @Column(name = "roa")
     private Float ROA;
-    @Column(name = "BienLoiNhuan")
+    @Column(name = "bien_loi_nhuan")
     private Float BienLoiNhuan;
-    @Column(name = "CoTuc")
+    @Column(name = "co_tuc")
     private Float CoTuc;
-    @Column(name = "TienMat")
+    @Column(name = "tien_mat")
     private Float TienMat;
-    @Column(name = "CoPhieu")
+    @Column(name = "co_phieu")
     private Float CoPhieu;
-    @Column(name = "DinhGia")
+    @Column(name = "dinh_gia")
     private Float DinhGia;
 
-    public Employee(String maCoPhieu, Float DTQ1, Float DTQ2, Float DTQ3, Float DTQ4, Float DTKehoach, Float LNQ1, Float LNQ2, Float LNQ3, Float LNQ4, Float LNKehoach, Float EPS, Float PE, Float ROE, Float VCSH, Float SLCP, Float bookvalue, Float PB, Float ROA, Float bienLoiNhuan, Float coTuc, Float tienMat, Float coPhieu, Float dinhGia) {
-        MaCoPhieu = maCoPhieu;
-        this.DTQ1 = DTQ1;
-        this.DTQ2 = DTQ2;
-        this.DTQ3 = DTQ3;
-        this.DTQ4 = DTQ4;
-        this.DTKehoach = DTKehoach;
-        this.LNQ1 = LNQ1;
-        this.LNQ2 = LNQ2;
-        this.LNQ3 = LNQ3;
-        this.LNQ4 = LNQ4;
-        this.LNKehoach = LNKehoach;
-        this.EPS = EPS;
-        this.PE = PE;
-        this.ROE = ROE;
-        this.VCSH = VCSH;
-        this.SLCP = SLCP;
-        Bookvalue = bookvalue;
-        this.PB = PB;
-        this.ROA = ROA;
-        BienLoiNhuan = bienLoiNhuan;
-        CoTuc = coTuc;
-        TienMat = tienMat;
-        CoPhieu = coPhieu;
-        DinhGia = dinhGia;
-    }
-
-    public Employee() {
-
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getMaCoPhieu() {
         return MaCoPhieu;

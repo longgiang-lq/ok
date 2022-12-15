@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="utf-8">
   <title>Employee Management System</title>
@@ -39,85 +39,16 @@
 <div class="container my-2">
   <br>
   <br>
-  <form action="#" th:action="@{/saveEmployee}" th:object="${employee}"
-        method="POST">
+  <form action="/find/{macophieu}">
 
-    <input type="text" th:field="*{firstName}"
+    <input type="text" value="text"
            placeholder="Mã cổ phiếu" class="form-control mb-4 col-4">
     <br>
-    <button type="submit" class="btn btn-info col-2"> Tìm kiếm</button>
+    <button type="submit"  class="btn btn-info col-2"> Tìm kiếm</button>
   </form>
 <!--  <h2 th:href = "@{/showNewEmployeeForm}" class="btn btn-primary btn-sm mb-3"> Tìm mã cổ phiếu </h2>-->
-  <br>
-  <br>
-  <h1>Danh sách mã cổ phiếu đã xem</h1>
-
-  <br>
-<!--  <div>-->
-<!--    <a th:href="@{/showInformation/{id}(id=${employee.id})}" class="btn btn-primary btn-sm mb-3"> Find Employee by ID  </a>-->
-<!--    <input type="text"-->
-<!--           placeholder="First Name" class="form-control mb-4 col-4">-->
-<!--  </div>-->
 
 
-  <table border="1" class = "table table-striped table-responsive-md">
-    <thead>
-    <tr>
-      <th>
-        <a th:href="@{'/page/' + ${currentPage} + '?sortField=id&sortDir=' + ${reverseSortDir}}">
-          Employee code</a>
-      </th>
-      <th>
-        <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
-          Employee First Name</a>
-      </th>
-      <th>
-        <a th:href="@{'/page/' + ${currentPage} + '?sortField=lastName&sortDir=' + ${reverseSortDir}}">
-          Employee Last Name</a>
-      </th>
-      <th>
-        <a th:href="@{'/page/' + ${currentPage} + '?sortField=email&sortDir=' + ${reverseSortDir}}">
-          Employee Email</a>
-      </th>
-      <th> Actions </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="employee : ${listEmployees}">
-      <td th:text="${employee.id}"></td>
-      <td th:text="${employee.firstName}"></td>
-      <td th:text="${employee.lastName}"></td>
-      <td th:text="${employee.email}"></td>
-      <td>
-        <a th:href="@{/deleteEmployee/{id}(id=${employee.id})}" class="btn btn-danger">Xóa</a>
-        <a th:href="@{/showInformation/{id}(id=${employee.id})}" class="btn btn-success">Xem</a>
-      </td>
-    </tr>
-    </tbody>
-  </table>
-
-  <div th:if = "${totalPages > 1}">
-    <div class = "row col-sm-10">
-      <div class = "col-sm-2">
-        Total Rows: [[${totalItems}]]
-      </div>
-      <div class = "col-sm-1">
-					<span th:each="i: ${#numbers.sequence(1, totalPages)}">
-						<a th:if="${currentPage != i}" th:href="@{'/page/' + ${i}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">[[${i}]]</a>
-						<span th:unless="${currentPage != i}">[[${i}]]</span>  &nbsp; &nbsp;
-					</span>
-      </div>
-      <div class = "col-sm-1">
-        <a th:if="${currentPage < totalPages}" th:href="@{'/page/' + ${currentPage + 1}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Next</a>
-        <span th:unless="${currentPage < totalPages}">Next</span>
-      </div>
-
-      <div class="col-sm-1">
-        <a th:if="${currentPage < totalPages}" th:href="@{'/page/' + ${totalPages}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Last</a>
-        <span th:unless="${currentPage < totalPages}">Last</span>
-      </div>
-    </div>
-  </div>
 </div>
 </body>
 </html>
