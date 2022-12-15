@@ -87,7 +87,27 @@
             <td th:text="${doanhthu.DTQ3}"></td>
             <td th:text="${doanhthu.DTQ4}"></td>
             <td th:text="${doanhthu.DTKehoach}"></td>
-
+        </tr>
+        <tr th:each="doanhthu : ${doanhthu}">
+            <td th:text="${doanhthu.DTQ12}"></td>
+            <td th:text="${doanhthu.DTQ22}"></td>
+            <td th:text="${doanhthu.DTQ32}"></td>
+            <td th:text="${doanhthu.DTQ42}"></td>
+            <td th:text="${doanhthu.DTKehoach2}"></td>
+        </tr>
+        <tr th:each="doanhthu : ${doanhthu}">
+            <td th:text="${doanhthu.DTQ13}"></td>
+            <td th:text="${doanhthu.DTQ23}"></td>
+            <td th:text="${doanhthu.DTQ33}"></td>
+            <td th:text="${doanhthu.DTQ43}"></td>
+            <td th:text="${doanhthu.DTKehoach3}"></td>
+        </tr>
+        <tr th:each="doanhthu : ${doanhthu}">
+            <td th:text="${doanhthu.DTQ14}"></td>
+            <td th:text="${doanhthu.DTQ24}"></td>
+            <td th:text="${doanhthu.DTQ34}"></td>
+            <td th:text="${doanhthu.DTQ44}"></td>
+            <td th:text="${doanhthu.DTKehoach4}"></td>
         </tr>
         </tbody>
     </table>
@@ -130,6 +150,30 @@
             <td th:text="${loinhuan.LNQ3}"></td>
             <td th:text="${loinhuan.LNQ4}"></td>
             <td th:text="${loinhuan.LNKehoach}"></td>
+
+        </tr>
+        <tr th:each="loinhuan : ${loinhuan}">
+            <td th:text="${loinhuan.LNQ12}"></td>
+            <td th:text="${loinhuan.LNQ22}"></td>
+            <td th:text="${loinhuan.LNQ32}"></td>
+            <td th:text="${loinhuan.LNQ42}"></td>
+            <td th:text="${loinhuan.LNKehoach2}"></td>
+
+        </tr>
+        <tr th:each="loinhuan : ${loinhuan}">
+            <td th:text="${loinhuan.LNQ13}"></td>
+            <td th:text="${loinhuan.LNQ23}"></td>
+            <td th:text="${loinhuan.LNQ33}"></td>
+            <td th:text="${loinhuan.LNQ43}"></td>
+            <td th:text="${loinhuan.LNKehoach3}"></td>
+
+        </tr>
+        <tr th:each="loinhuan : ${loinhuan}">
+            <td th:text="${loinhuan.LNQ14}"></td>
+            <td th:text="${loinhuan.LNQ24}"></td>
+            <td th:text="${loinhuan.LNQ34}"></td>
+            <td th:text="${loinhuan.LNQ44}"></td>
+            <td th:text="${loinhuan.LNKehoach4}"></td>
 
         </tr>
         </tbody>
@@ -195,6 +239,7 @@
             <td th:text="${vonHoa.bienLoiNhuan}"></td>
 
         </tr>
+
         </tbody>
     </table>
     <br>
@@ -224,21 +269,74 @@
             <td th:text="${tongHop.coPhieu}"></td>
 
         </tr>
+        <tr th:each="tongHop : ${tongHop}">
+            <td th:text="${tongHop.coTuc2}"></td>
+            <td th:text="${tongHop.tienMat2}"></td>
+            <td th:text="${tongHop.coPhieu2}"></td>
+
+        </tr>
+        <tr th:each="tongHop : ${tongHop}">
+            <td th:text="${tongHop.coTuc3}"></td>
+            <td th:text="${tongHop.tienMat3}"></td>
+            <td th:text="${tongHop.coPhieu3}"></td>
+
+        </tr>
+        <tr th:each="tongHop : ${tongHop}">
+            <td th:text="${tongHop.coTuc4}"></td>
+            <td th:text="${tongHop.tienMat4}"></td>
+            <td th:text="${tongHop.coPhieu4}"></td>
+
+        </tr>
         </tbody>
     </table>
 
-    <button type="submit" class="btn btn-info col-2" onclick="myFunction()">Định Giá</button>
 
-    <p id="demo"></p>
     <br>
+    <br>
+    <h3> Định Giá</h3>
+    <table border="1" class = "table table-striped table-responsive-md">
+        <thead>
+        <tr>
+            <th>
+                <a th:href="@{'/page/' + ${currentPage} + ${reverseSortDir}}">
+                    Mã cổ phiếu</a>
+            </th>
+            <th>
+                <a th:href="@{'/page/' + ${currentPage} + ${reverseSortDir}}">
+                    Định Giá</a>
+            </th>
+        </tr>
 
-    <script>
-        function myFunction() {
+        </thead>
+        <tbody>
+        <tr th:each="danhSachDaXem: ${danhSachDaXem}">
+            <td th:text="${danhSachDaXem.maCoPhieu}"></td>
+            <td th:text="${danhSachDaXem.dinhGia}"></td>
 
-            document.getElementById("demo").innerHTML = "45656565";
-            document.getElementById("demo").style.color = "red";
-        }
-    </script>
+
+        </tr>
+
+        </tbody>
+    </table>
+
+
+
+<!--    <button type="submit" class="btn btn-info col-2" onclick="myFunction()">Định Giá</button>-->
+
+<!--    <p id="demo"></p>-->
+<!--    <br>-->
+
+
+<!--    <script>-->
+<!--        function myFunction() {-->
+
+
+<!--            document.getElementById("demo"). = ;-->
+<!--            document.getElementById("demo").style.color = "red";-->
+<!--        }-->
+<!--    </script>-->
+
+
 
 
 </div>

@@ -5,5 +5,5 @@ import lombok.Data;
 
 @Data
 public class EmployeeKey implements Serializable {
-    private String MaCoPhieu;
+    private long id;
 }

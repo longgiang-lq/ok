@@ -40,8 +40,8 @@ public class EmployeeController {
         return "redirect:/";
     }
 
-    @GetMapping("/find/{macophieu}")
-    public String showFormForUpdate(@PathVariable( value = "macophieu") String macophieu, Model model) {
+    @GetMapping("/find")
+    public String showFormForUpdate(Model model,@RequestParam( name = "macophieu", required =false) String macophieu) {
 
         // get employee from the service
         List<DoanhThu> doanhthu = employeeService.Doanhthu(macophieu);

@@ -22,13 +22,15 @@ public interface EmployeeRepository extends JpaRepository<Employee, EmployeeKey>
     DanhSachDaXem DanhSachDaXem(String macophieu);
 
     @Query(
-            "SELECT new com.example.employeemanagementwebapp.dto.DoanhThu(ep.DTQ1,ep.DTQ2,ep.DTQ3,ep.DTQ4,ep.DTKehoach) " +
+            "SELECT new com.example.employeemanagementwebapp.dto.DoanhThu(ep.DTQ1,ep.DTQ2,ep.DTQ3,ep.DTQ4,ep.DTKehoach,ep.DTQ12,ep.DTQ22,ep.DTQ32,ep.DTQ42,ep.DTKehoach2,ep.DTQ13,ep.DTQ23,ep.DTQ33,ep.DTQ43,ep.DTKehoach3," +
+                    "ep.DTQ14,ep.DTQ24,ep.DTQ34,ep.DTQ44,ep.DTKehoach4) " +
                     "FROM Employee ep WHERE ep.MaCoPhieu =:macophieu"
     )
     List<DoanhThu> Doanhthu(String macophieu);
 
     @Query(
-            "SELECT new com.example.employeemanagementwebapp.dto.LoiNhuan(ep.LNQ1,ep.LNQ2,ep.LNQ3,ep.LNQ4,ep.LNKehoach) " +
+            "SELECT new com.example.employeemanagementwebapp.dto.LoiNhuan(ep.LNQ1,ep.LNQ2,ep.LNQ3,ep.LNQ4,ep.LNKehoach,ep.LNQ12,ep.LNQ22,ep.LNQ32,ep.LNQ42,ep.LNKehoach2,ep.LNQ13,ep.LNQ23,ep.LNQ33,ep.LNQ43,ep.LNKehoach3," +
+                    "ep.LNQ14,ep.LNQ24,ep.LNQ34,ep.LNQ44,ep.LNKehoach4) " +
                     "FROM Employee ep WHERE ep.MaCoPhieu =:macophieu"
     )
     List<LoiNhuan> LoiNhuan(String macophieu);
@@ -40,7 +42,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, EmployeeKey>
     List<VonHoa> VonHoa(String macophieu);
 
     @Query(
-            "SELECT new com.example.employeemanagementwebapp.dto.TongHop(ep.CoTuc,ep.TienMat,ep.CoPhieu) " +
+            "SELECT new com.example.employeemanagementwebapp.dto.TongHop(ep.CoTuc,ep.TienMat,ep.CoPhieu,ep.CoTuc2,ep.TienMat2,ep.CoPhieu2,ep.CoTuc3,ep.TienMat3,ep.CoPhieu3,ep.CoTuc4,ep.TienMat4,ep.CoPhieu4) " +
                     "FROM Employee ep WHERE ep.MaCoPhieu = :macophieu"
     )
     List<TongHop> Tonghop(String macophieu);

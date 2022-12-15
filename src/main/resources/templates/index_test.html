@@ -39,10 +39,10 @@
 <div class="container my-2">
   <br>
   <br>
-  <form action="/find/{macophieu}">
+  <form th:action="@{/find}">
 
-    <input type="text" value="text"
-           placeholder="Mã cổ phiếu" class="form-control mb-4 col-4">
+    <input type="text"
+           placeholder="Mã cổ phiếu" class="form-control mb-4 col-4" name ="macophieu" id ="macophieu">
     <br>
     <button type="submit"  class="btn btn-info col-2"> Tìm kiếm</button>
   </form>
