@@ -54,13 +54,13 @@ public class Employee implements Serializable {
     private Float DTQ44;
 
     @Column(name = "dtkehoach")
-    private Float DTKehoach;
+    private String DTKehoach;
     @Column(name = "dtkehoach2")
-    private Float DTKehoach2;
+    private String DTKehoach2;
     @Column(name = "dtkehoach3")
-    private Float DTKehoach3;
+    private String DTKehoach3;
     @Column(name = "dtkehoach4")
-    private Float DTKehoach4;
+    private String DTKehoach4;
 
 
 
@@ -104,20 +104,20 @@ public class Employee implements Serializable {
     private Float LNQ44;
 
     @Column(name = "lnkehoach")
-    private Float LNKehoach;
+    private String LNKehoach;
     @Column(name = "lnkehoach2")
-    private Float LNKehoach2;
+    private String LNKehoach2;
     @Column(name = "lnkehoach3")
-    private Float LNKehoach3;
+    private String LNKehoach3;
     @Column(name = "lnkehoach4")
-    private Float LNKehoach4;
+    private String LNKehoach4;
 
     @Column(name = "eps")
     private Float EPS;
     @Column(name = "pe")
     private Float PE;
     @Column(name = "roe")
-    private Float ROE;
+    private String ROE;
     @Column(name = "vcsh")
     private Float VCSH;
     @Column(name = "slcp")
@@ -127,9 +127,9 @@ public class Employee implements Serializable {
     @Column(name = "pb")
     private Float PB;
     @Column(name = "roa")
-    private Float ROA;
+    private String ROA;
     @Column(name = "bien_loi_nhuan")
-    private Float BienLoiNhuan;
+    private String BienLoiNhuan;
     @Column(name = "co_tuc")
     private Float CoTuc;
     @Column(name = "co_tuc2")
@@ -147,15 +147,15 @@ public class Employee implements Serializable {
     @Column(name = "tien_mat4")
     private Float TienMat4;
     @Column(name = "co_phieu")
-    private Float CoPhieu;
+    private int CoPhieu;
     @Column(name = "co_phieu2")
-    private Float CoPhieu2;
+    private int CoPhieu2;
     @Column(name = "co_phieu3")
-    private Float CoPhieu3;
+    private int CoPhieu3;
     @Column(name = "co_phieu4")
-    private Float CoPhieu4;
+    private int CoPhieu4;
     @Column(name = "dinh_gia")
-    private Float DinhGia;
+    private int DinhGia;
 
     public String getMaCoPhieu() {
         return MaCoPhieu;
@@ -163,30 +163,6 @@ public class Employee implements Serializable {
 
     public void setMaCoPhieu(String maCoPhieu) {
         MaCoPhieu = maCoPhieu;
-    }
-
-    public Float getCoPhieu() {
-        return CoPhieu;
-    }
-
-    public void setCoPhieu(Float coPhieu) {
-        CoPhieu = coPhieu;
-    }
-
-    public Float getCoPhieu2() {
-        return CoPhieu2;
-    }
-
-    public void setCoPhieu2(Float coPhieu2) {
-        CoPhieu2 = coPhieu2;
-    }
-
-    public Float getCoPhieu3() {
-        return CoPhieu3;
-    }
-
-    public void setCoPhieu3(Float coPhieu3) {
-        CoPhieu3 = coPhieu3;
     }
 
     public Float getDTQ1() {
@@ -317,35 +293,35 @@ public class Employee implements Serializable {
         this.DTQ44 = DTQ44;
     }
 
-    public Float getDTKehoach() {
+    public String getDTKehoach() {
         return DTKehoach;
     }
 
-    public void setDTKehoach(Float DTKehoach) {
+    public void setDTKehoach(String DTKehoach) {
         this.DTKehoach = DTKehoach;
     }
 
-    public Float getDTKehoach2() {
+    public String getDTKehoach2() {
         return DTKehoach2;
     }
 
-    public void setDTKehoach2(Float DTKehoach2) {
+    public void setDTKehoach2(String DTKehoach2) {
         this.DTKehoach2 = DTKehoach2;
     }
 
-    public Float getDTKehoach3() {
+    public String getDTKehoach3() {
         return DTKehoach3;
     }
 
-    public void setDTKehoach3(Float DTKehoach3) {
+    public void setDTKehoach3(String DTKehoach3) {
         this.DTKehoach3 = DTKehoach3;
     }
 
-    public Float getDTKehoach4() {
+    public String getDTKehoach4() {
         return DTKehoach4;
     }
 
-    public void setDTKehoach4(Float DTKehoach4) {
+    public void setDTKehoach4(String DTKehoach4) {
         this.DTKehoach4 = DTKehoach4;
     }
 
@@ -477,35 +453,35 @@ public class Employee implements Serializable {
         this.LNQ44 = LNQ44;
     }
 
-    public Float getLNKehoach() {
+    public String getLNKehoach() {
         return LNKehoach;
     }
 
-    public void setLNKehoach(Float LNKehoach) {
+    public void setLNKehoach(String LNKehoach) {
         this.LNKehoach = LNKehoach;
     }
 
-    public Float getLNKehoach2() {
+    public String getLNKehoach2() {
         return LNKehoach2;
     }
 
-    public void setLNKehoach2(Float LNKehoach2) {
+    public void setLNKehoach2(String LNKehoach2) {
         this.LNKehoach2 = LNKehoach2;
     }
 
-    public Float getLNKehoach3() {
+    public String getLNKehoach3() {
         return LNKehoach3;
     }
 
-    public void setLNKehoach3(Float LNKehoach3) {
+    public void setLNKehoach3(String LNKehoach3) {
         this.LNKehoach3 = LNKehoach3;
     }
 
-    public Float getLNKehoach4() {
+    public String getLNKehoach4() {
         return LNKehoach4;
     }
 
-    public void setLNKehoach4(Float LNKehoach4) {
+    public void setLNKehoach4(String LNKehoach4) {
         this.LNKehoach4 = LNKehoach4;
     }
 
@@ -525,11 +501,11 @@ public class Employee implements Serializable {
         this.PE = PE;
     }
 
-    public Float getROE() {
+    public String getROE() {
         return ROE;
     }
 
-    public void setROE(Float ROE) {
+    public void setROE(String ROE) {
         this.ROE = ROE;
     }
 
@@ -565,19 +541,19 @@ public class Employee implements Serializable {
         this.PB = PB;
     }
 
-    public Float getROA() {
+    public String getROA() {
         return ROA;
     }
 
-    public void setROA(Float ROA) {
+    public void setROA(String ROA) {
         this.ROA = ROA;
     }
 
-    public Float getBienLoiNhuan() {
+    public String getBienLoiNhuan() {
         return BienLoiNhuan;
     }
 
-    public void setBienLoiNhuan(Float bienLoiNhuan) {
+    public void setBienLoiNhuan(String bienLoiNhuan) {
         BienLoiNhuan = bienLoiNhuan;
     }
 
@@ -645,19 +621,43 @@ public class Employee implements Serializable {
         TienMat4 = tienMat4;
     }
 
-    public Float getCoPhieu4() {
+    public int getCoPhieu() {
+        return CoPhieu;
+    }
+
+    public void setCoPhieu(int coPhieu) {
+        CoPhieu = coPhieu;
+    }
+
+    public int getCoPhieu2() {
+        return CoPhieu2;
+    }
+
+    public void setCoPhieu2(int coPhieu2) {
+        CoPhieu2 = coPhieu2;
+    }
+
+    public int getCoPhieu3() {
+        return CoPhieu3;
+    }
+
+    public void setCoPhieu3(int coPhieu3) {
+        CoPhieu3 = coPhieu3;
+    }
+
+    public int getCoPhieu4() {
         return CoPhieu4;
     }
 
-    public void setCoPhieu4(Float coPhieu4) {
+    public void setCoPhieu4(int coPhieu4) {
         CoPhieu4 = coPhieu4;
     }
 
-    public Float getDinhGia() {
+    public int getDinhGia() {
         return DinhGia;
     }
 
-    public void setDinhGia(Float dinhGia) {
+    public void setDinhGia(int dinhGia) {
         DinhGia = dinhGia;
     }
 }

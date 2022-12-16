@@ -3,15 +3,15 @@ package com.example.employeemanagementwebapp.dto;
 public class VonHoa {
     private Float EPS;
     private Float PE;
-    private Float ROE;
+    private String ROE;
     private Float VCSH;
     private Float SLCP;
     private Float Bookvalue;
     private Float PB;
-    private Float ROA;
-    private Float BienLoiNhuan;
+    private String ROA;
+    private String BienLoiNhuan;
 
-    public VonHoa(Float EPS, Float PE, Float ROE, Float VCSH, Float SLCP, Float bookvalue, Float PB, Float ROA, Float bienLoiNhuan) {
+    public VonHoa(Float EPS, Float PE, String ROE, Float VCSH, Float SLCP, Float bookvalue, Float PB, String ROA, String bienLoiNhuan) {
         this.EPS = EPS;
         this.PE = PE;
         this.ROE = ROE;
@@ -39,11 +39,11 @@ public class VonHoa {
         this.PE = PE;
     }
 
-    public Float getROE() {
+    public String getROE() {
         return ROE;
     }
 
-    public void setROE(Float ROE) {
+    public void setROE(String ROE) {
         this.ROE = ROE;
     }
 
@@ -79,19 +79,19 @@ public class VonHoa {
         this.PB = PB;
     }
 
-    public Float getROA() {
+    public String getROA() {
         return ROA;
     }
 
-    public void setROA(Float ROA) {
+    public void setROA(String ROA) {
         this.ROA = ROA;
     }
 
-    public Float getBienLoiNhuan() {
+    public String getBienLoiNhuan() {
         return BienLoiNhuan;
     }
 
-    public void setBienLoiNhuan(Float bienLoiNhuan) {
+    public void setBienLoiNhuan(String bienLoiNhuan) {
         BienLoiNhuan = bienLoiNhuan;
     }
 }

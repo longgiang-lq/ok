@@ -16,13 +16,13 @@
         th, td{
             padding: 5px;
         }
-        th {
+        th, td {
             text-align: center;
         }
     </style>
 
 </head>
-<body style="background-color:lightgrey;">
+<body style="background-color:lightblue;">
 
 <!-- create navigation bar ( header) -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -67,7 +67,12 @@
 
     <table border="1" class = "table table-striped table-responsive-md">
         <thead>
+
         <tr>
+            <th>
+                <a th:href="@{'/page/' + ${currentPage} + ${reverseSortDir}}" style="color:green">
+                    Năm</a>
+            </th>
             <th>
                 <a th:href="@{'/page/' + ${currentPage} + ${reverseSortDir}}">
                     Quý 1</a>
@@ -95,6 +100,7 @@
         </thead>
         <tbody>
         <tr th:each="doanhthu : ${doanhthu}">
+            <td th:text="2019" style="color:green">2019</td>
             <td th:text="${doanhthu.DTQ1}"></td>
             <td th:text="${doanhthu.DTQ2}"></td>
             <td th:text="${doanhthu.DTQ3}"></td>
@@ -102,6 +108,7 @@
             <td th:text="${doanhthu.DTKehoach}"></td>
         </tr>
         <tr th:each="doanhthu : ${doanhthu}">
+            <td th:text="2020"style="color:green">2020</td>
             <td th:text="${doanhthu.DTQ12}"></td>
             <td th:text="${doanhthu.DTQ22}"></td>
             <td th:text="${doanhthu.DTQ32}"></td>
@@ -109,6 +116,7 @@
             <td th:text="${doanhthu.DTKehoach2}"></td>
         </tr>
         <tr th:each="doanhthu : ${doanhthu}">
+            <td th:text="2021"style="color:green">2021</td>
             <td th:text="${doanhthu.DTQ13}"></td>
             <td th:text="${doanhthu.DTQ23}"></td>
             <td th:text="${doanhthu.DTQ33}"></td>
@@ -116,6 +124,7 @@
             <td th:text="${doanhthu.DTKehoach3}"></td>
         </tr>
         <tr th:each="doanhthu : ${doanhthu}">
+            <td th:text="2022"style="color:green">2022</td>
             <td th:text="${doanhthu.DTQ14}"></td>
             <td th:text="${doanhthu.DTQ24}"></td>
             <td th:text="${doanhthu.DTQ34}"></td>
@@ -132,6 +141,10 @@
         <thead>
         <tr>
             <th>
+                <a th:href="@{'/page/' + ${currentPage} + ${reverseSortDir}}" style="color:green">
+                    Năm</a>
+            </th>
+            <th>
                 <a th:href="@{'/page/' + ${currentPage} +  ${reverseSortDir}}">
                     Quý 1</a>
             </th>
@@ -158,6 +171,7 @@
         </thead>
         <tbody>
         <tr th:each="loinhuan : ${loinhuan}">
+            <td th:text="2019"style="color:green">2019</td>
             <td th:text="${loinhuan.LNQ1}"></td>
             <td th:text="${loinhuan.LNQ2}"></td>
             <td th:text="${loinhuan.LNQ3}"></td>
@@ -166,6 +180,7 @@
 
         </tr>
         <tr th:each="loinhuan : ${loinhuan}">
+            <td th:text="2020"style="color:green">2020</td>
             <td th:text="${loinhuan.LNQ12}"></td>
             <td th:text="${loinhuan.LNQ22}"></td>
             <td th:text="${loinhuan.LNQ32}"></td>
@@ -174,6 +189,7 @@
 
         </tr>
         <tr th:each="loinhuan : ${loinhuan}">
+            <td th:text="2021"style="color:green">2021</td>
             <td th:text="${loinhuan.LNQ13}"></td>
             <td th:text="${loinhuan.LNQ23}"></td>
             <td th:text="${loinhuan.LNQ33}"></td>
@@ -182,6 +198,7 @@
 
         </tr>
         <tr th:each="loinhuan : ${loinhuan}">
+            <td th:text="2022"style="color:green">2022</td>
             <td th:text="${loinhuan.LNQ14}"></td>
             <td th:text="${loinhuan.LNQ24}"></td>
             <td th:text="${loinhuan.LNQ34}"></td>
@@ -262,6 +279,10 @@
         <thead>
         <tr>
             <th>
+                <a th:href="@{'/page/' + ${currentPage} + ${reverseSortDir}}"style="color:green">
+                    Năm</a>
+            </th>
+            <th>
                 <a th:href="@{'/page/' + ${currentPage} + ${reverseSortDir}}">
                     Cổ Tức</a>
             </th>
@@ -277,24 +298,28 @@
         </thead>
         <tbody>
         <tr th:each="tongHop : ${tongHop}">
+            <td th:text="2019"style="color:green">2019</td>
             <td th:text="${tongHop.coTuc}"></td>
             <td th:text="${tongHop.tienMat}"></td>
             <td th:text="${tongHop.coPhieu}"></td>
 
         </tr>
         <tr th:each="tongHop : ${tongHop}">
+            <td th:text="2020"style="color:green">2020</td>
             <td th:text="${tongHop.coTuc2}"></td>
             <td th:text="${tongHop.tienMat2}"></td>
             <td th:text="${tongHop.coPhieu2}"></td>
 
         </tr>
         <tr th:each="tongHop : ${tongHop}">
+            <td th:text="2021"style="color:green">2021</td>
             <td th:text="${tongHop.coTuc3}"></td>
             <td th:text="${tongHop.tienMat3}"></td>
             <td th:text="${tongHop.coPhieu3}"></td>
 
         </tr>
         <tr th:each="tongHop : ${tongHop}">
+            <td th:text="2022"style="color:green">2022</td>
             <td th:text="${tongHop.coTuc4}"></td>
             <td th:text="${tongHop.tienMat4}"></td>
             <td th:text="${tongHop.coPhieu4}"></td>
@@ -322,9 +347,9 @@
 
         </thead>
         <tbody>
-        <tr th:each="danhSachDaXem: ${danhSachDaXem}">
-            <td th:text="${danhSachDaXem.maCoPhieu}" style="color:red"></td>
-            <td th:text="${danhSachDaXem.dinhGia}"></td>
+        <tr th:each="danhSachDaXem: ${danhSachDaXem} ">
+            <td th:text="${danhSachDaXem.maCoPhieu}" style="color:green"></td>
+            <td th:text="${danhSachDaXem.dinhGia}" style="color:green"></td>
 
 
         </tr>

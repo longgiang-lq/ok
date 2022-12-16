@@ -2,9 +2,9 @@ package com.example.employeemanagementwebapp.dto;
 
 public class DanhSachDaXem {
     private String MaCoPhieu;
-    private Float DinhGia;
+    private int DinhGia;
 
-    public DanhSachDaXem(String maCoPhieu, Float dinhGia) {
+    public DanhSachDaXem(String maCoPhieu, int dinhGia) {
         MaCoPhieu = maCoPhieu;
         DinhGia = dinhGia;
     }
@@ -21,11 +21,11 @@ public class DanhSachDaXem {
         MaCoPhieu = maCoPhieu;
     }
 
-    public Float getDinhGia() {
+    public int getDinhGia() {
         return DinhGia;
     }
 
-    public void setDinhGia(Float dinhGia) {
+    public void setDinhGia(int dinhGia) {
         DinhGia = dinhGia;
     }
 }

@@ -5,24 +5,24 @@ public class LoiNhuan {
     private Float LNQ2;
     private Float LNQ3;
     private Float LNQ4;
-    private Float LNKehoach;
+    private String LNKehoach;
     private Float LNQ12;
     private Float LNQ22;
     private Float LNQ32;
     private Float LNQ42;
-    private Float LNKehoach2;
+    private String LNKehoach2;
     private Float LNQ13;
     private Float LNQ23;
     private Float LNQ33;
     private Float LNQ43;
-    private Float LNKehoach3;
+    private String LNKehoach3;
     private Float LNQ14;
     private Float LNQ24;
     private Float LNQ34;
     private Float LNQ44;
-    private Float LNKehoach4;
+    private String LNKehoach4;
 
-    public LoiNhuan(Float LNQ1, Float LNQ2, Float LNQ3, Float LNQ4, Float LNKehoach, Float LNQ12, Float LNQ22, Float LNQ32, Float LNQ42, Float LNKehoach2, Float LNQ13, Float LNQ23, Float LNQ33, Float LNQ43, Float LNKehoach3, Float LNQ14, Float LNQ24, Float LNQ34, Float LNQ44, Float LNKehoach4) {
+    public LoiNhuan(Float LNQ1, Float LNQ2, Float LNQ3, Float LNQ4, String LNKehoach, Float LNQ12, Float LNQ22, Float LNQ32, Float LNQ42, String LNKehoach2, Float LNQ13, Float LNQ23, Float LNQ33, Float LNQ43, String LNKehoach3, Float LNQ14, Float LNQ24, Float LNQ34, Float LNQ44, String LNKehoach4) {
         this.LNQ1 = LNQ1;
         this.LNQ2 = LNQ2;
         this.LNQ3 = LNQ3;
@@ -77,11 +77,11 @@ public class LoiNhuan {
         this.LNQ4 = LNQ4;
     }
 
-    public Float getLNKehoach() {
+    public String getLNKehoach() {
         return LNKehoach;
     }
 
-    public void setLNKehoach(Float LNKehoach) {
+    public void setLNKehoach(String LNKehoach) {
         this.LNKehoach = LNKehoach;
     }
 
@@ -117,11 +117,11 @@ public class LoiNhuan {
         this.LNQ42 = LNQ42;
     }
 
-    public Float getLNKehoach2() {
+    public String getLNKehoach2() {
         return LNKehoach2;
     }
 
-    public void setLNKehoach2(Float LNKehoach2) {
+    public void setLNKehoach2(String LNKehoach2) {
         this.LNKehoach2 = LNKehoach2;
     }
 
@@ -157,11 +157,11 @@ public class LoiNhuan {
         this.LNQ43 = LNQ43;
     }
 
-    public Float getLNKehoach3() {
+    public String getLNKehoach3() {
         return LNKehoach3;
     }
 
-    public void setLNKehoach3(Float LNKehoach3) {
+    public void setLNKehoach3(String LNKehoach3) {
         this.LNKehoach3 = LNKehoach3;
     }
 
@@ -197,11 +197,11 @@ public class LoiNhuan {
         this.LNQ44 = LNQ44;
     }
 
-    public Float getLNKehoach4() {
+    public String getLNKehoach4() {
         return LNKehoach4;
     }
 
-    public void setLNKehoach4(Float LNKehoach4) {
+    public void setLNKehoach4(String LNKehoach4) {
         this.LNKehoach4 = LNKehoach4;
     }
 }

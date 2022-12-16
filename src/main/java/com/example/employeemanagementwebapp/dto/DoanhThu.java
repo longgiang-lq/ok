@@ -5,24 +5,24 @@ public class DoanhThu {
     private Float DTQ2;
     private Float DTQ3;
     private Float DTQ4;
-    private Float DTKehoach;
+    private String DTKehoach;
     private Float DTQ12;
     private Float DTQ22;
     private Float DTQ32;
     private Float DTQ42;
-    private Float DTKehoach2;
+    private String DTKehoach2;
     private Float DTQ13;
     private Float DTQ23;
     private Float DTQ33;
     private Float DTQ43;
-    private Float DTKehoach3;
+    private String DTKehoach3;
     private Float DTQ14;
     private Float DTQ24;
     private Float DTQ34;
     private Float DTQ44;
-    private Float DTKehoach4;
+    private String DTKehoach4;
 
-    public DoanhThu(Float DTQ1, Float DTQ2, Float DTQ3, Float DTQ4, Float DTKehoach, Float DTQ12, Float DTQ22, Float DTQ32, Float DTQ42, Float DTKehoach2, Float DTQ13, Float DTQ23, Float DTQ33, Float DTQ43, Float DTKehoach3, Float DTQ14, Float DTQ24, Float DTQ34, Float DTQ44, Float DTKehoach4) {
+    public DoanhThu(Float DTQ1, Float DTQ2, Float DTQ3, Float DTQ4, String DTKehoach, Float DTQ12, Float DTQ22, Float DTQ32, Float DTQ42, String DTKehoach2, Float DTQ13, Float DTQ23, Float DTQ33, Float DTQ43, String DTKehoach3, Float DTQ14, Float DTQ24, Float DTQ34, Float DTQ44, String DTKehoach4) {
         this.DTQ1 = DTQ1;
         this.DTQ2 = DTQ2;
         this.DTQ3 = DTQ3;
@@ -77,11 +77,11 @@ public class DoanhThu {
         this.DTQ4 = DTQ4;
     }
 
-    public Float getDTKehoach() {
+    public String getDTKehoach() {
         return DTKehoach;
     }
 
-    public void setDTKehoach(Float DTKehoach) {
+    public void setDTKehoach(String DTKehoach) {
         this.DTKehoach = DTKehoach;
     }
 
@@ -117,11 +117,11 @@ public class DoanhThu {
         this.DTQ42 = DTQ42;
     }
 
-    public Float getDTKehoach2() {
+    public String getDTKehoach2() {
         return DTKehoach2;
     }
 
-    public void setDTKehoach2(Float DTKehoach2) {
+    public void setDTKehoach2(String DTKehoach2) {
         this.DTKehoach2 = DTKehoach2;
     }
 
@@ -157,11 +157,11 @@ public class DoanhThu {
         this.DTQ43 = DTQ43;
     }
 
-    public Float getDTKehoach3() {
+    public String getDTKehoach3() {
         return DTKehoach3;
     }
 
-    public void setDTKehoach3(Float DTKehoach3) {
+    public void setDTKehoach3(String DTKehoach3) {
         this.DTKehoach3 = DTKehoach3;
     }
 
@@ -197,11 +197,11 @@ public class DoanhThu {
         this.DTQ44 = DTQ44;
     }
 
-    public Float getDTKehoach4() {
+    public String getDTKehoach4() {
         return DTKehoach4;
     }
 
-    public void setDTKehoach4(Float DTKehoach4) {
+    public void setDTKehoach4(String DTKehoach4) {
         this.DTKehoach4 = DTKehoach4;
     }
 }
